@@ -1,0 +1,44 @@
+﻿
+@model mvcstokyucedag.Models.entity.tblmusteriler
+
+@{
+    ViewBag.Title = "yenimusteri";
+    Layout = "~/Views/Shared/_Mainlayout.cshtml";
+}
+
+<form method="post" class="form-group">
+    <div>
+        <label>müşteri adını giriniz</label>
+       @* <input type="text" class="form-control" name="musteriad" />*@
+
+        @Html.TextBoxFor(m => m.musteriad, new {@class="form-control"})
+        @Html.ValidationMessageFor(m => m.musteriad, "", new { @style = "color:blue" })
+
+    </div>
+
+    <div style="margin-top:20px">
+        <label>müşteri soyadını giriniz</label>
+        @*<input type="text" class="form-control" name="musterisoyad" />*@
+
+        @Html.TextBoxFor(m => m.musterisoyad, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.musterisoyad, "", new { @style = "color:blue" })
+
+    </div>
+
+    <div style="margin-top:30px">
+        <button class="btn btn-info" id="btn1">müşteri ekle</button>
+    </div>
+
+    <script>
+
+        $('#btn1').click(function () {
+
+            alert('müşteri ekleme işlemi yapıldı..');
+
+        });
+
+
+    </script>
+
+</form>
+

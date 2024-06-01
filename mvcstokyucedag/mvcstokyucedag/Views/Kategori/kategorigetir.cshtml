@@ -1,0 +1,31 @@
+﻿@model mvcstokyucedag.Models.entity.tblkategoriler
+@{
+    ViewBag.Title = "kategorigetir";
+    Layout = "~/Views/Shared/_Mainlayout.cshtml";
+}
+
+@using (Html.BeginForm("guncelle", "kategori", FormMethod.Post))
+            {
+                <div class="form-group">
+                    @Html.LabelFor(s => s.kategoriID)
+                    <br />
+                    @Html.TextBoxFor(s => s.kategoriID, new { @class = "form-control" })
+                   
+                    <br />
+                    @Html.LabelFor(s => s.kategoriad)
+                    <br />
+                    @Html.TextBoxFor(s => s.kategoriad, new { @class = "form-control" })
+
+
+                </div>
+                
+                <br />
+
+                <div>
+                    <button class="btn btn-warning">kategori güncelle</button>
+                </div>
+            }
+            
+
+
+

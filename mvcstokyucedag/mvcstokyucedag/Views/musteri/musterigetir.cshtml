@@ -1,0 +1,36 @@
+﻿@model mvcstokyucedag.Models.entity.tblmusteriler
+@{
+    ViewBag.Title = "musterigetir";
+    Layout = "~/Views/Shared/_Mainlayout.cshtml";
+}
+
+@using (Html.BeginForm("guncelle", "musteri", FormMethod.Post))
+{
+    <div class="form-group">
+
+        @Html.LabelFor(s => s.musteriID)
+        <br />
+        @Html.TextBoxFor(s => s.musteriID, new { @class = "form-control" })
+
+
+
+        @Html.LabelFor(s => s.musteriad)
+        <br />
+        @Html.TextBoxFor(s => s.musteriad, new { @class = "form-control" })
+
+        <br />
+
+        @Html.LabelFor(s => s.musterisoyad)
+        <br />
+        @Html.TextBoxFor(s => s.musterisoyad, new { @class = "form-control" })
+
+    </div>
+
+    <br />
+
+    <div>
+        <button class="btn btn-warning">müşteri güncelle</button>
+    </div>
+}
+
+

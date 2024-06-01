@@ -1,0 +1,49 @@
+﻿
+@model mvcstokyucedag.Models.entity.tblurunler
+
+@{
+    ViewBag.Title = "urunekle";
+    Layout = "~/Views/Shared/_Mainlayout.cshtml";
+}
+
+<form method="post" class="form-group">
+    <div>
+        <label>ürünün adını giriniz</label>
+        <input type="text" class="form-control" name="urunad" required="" maxlength="30"/>
+
+    </div>
+
+    <div style="margin-top:20px">
+        <label>ürünün markasını giriniz</label>
+        <input type="text" class="form-control" name="urunmarka" placeholder="buraya markayı yazınız.." required=""/>
+
+    </div>
+
+    <div style="margin-top:20px">
+        <label>ürünün kategorisini seçiniz</label>
+        @Html.DropDownListFor(s =>s.tblkategoriler.kategoriID, (List<SelectListItem>)ViewBag.dgr, new {@class="form-control"})
+
+    </div>
+
+    <div style="margin-top:20px">
+        <label>ürünün fiyatını giriniz</label>
+        <input type="text" class="form-control" name="urunfiyat" required="" />
+
+    </div>
+
+    <div style="margin-top:20px">
+        <label>ürünün stok adetini giriniz</label>
+        <input type="text" class="form-control" name="urunstok" required=""/>
+
+    </div>
+
+    <div style="margin-top:30px">
+        <button class="btn btn-info">ürün ekle</button>
+    </div>
+
+
+
+</form>
+
+
+
